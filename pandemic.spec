@@ -40,6 +40,7 @@ BuildRequires: perl(Tk::Pane)
 BuildRequires: perl(Tk::ToolBar)
 BuildRequires: perl(UNIVERSAL::require)
 BuildRequires: perl(YAML::Tiny)
+BuildRequires: x11-server-xvfb
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
@@ -61,7 +62,7 @@ electronic copy.
 %make
 
 %check
-make test
+xvfb-run make test
 
 %install
 rm -rf %buildroot
