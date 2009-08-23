@@ -2,7 +2,7 @@ Name:       pandemic
 Version:    0.7.0
 Release:    %mkrel 1
 License:    GPL or Artistic
-Group:      Games/Stragey
+Group:      Games/Strategy
 Summary:    Operations expert pandemic role
 Url:        http://search.cpan.org/dist/%{realname}
 Source:     http://www.cpan.org/modules/by-module/Games/Games-Pandemic-%{version}.tar.gz
