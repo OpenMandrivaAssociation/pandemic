@@ -4,7 +4,7 @@ Release:    %mkrel 1
 License:    GPL or Artistic
 Group:      Games/Strategy
 Summary:    Operations expert pandemic role
-Url:        http://search.cpan.org/dist/%{realname}
+Url:        http://search.cpan.org/dist/Games-Pandemic/
 Source:     http://www.cpan.org/modules/by-module/Games/Games-Pandemic-%{version}.tar.gz
 BuildRequires: perl(Convert::Color)
 BuildRequires: perl(Devel::CheckOS)
