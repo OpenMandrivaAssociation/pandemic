@@ -1,11 +1,16 @@
+%define upstream_name    Games-Pandemic
+%define upstream_version 1.000000
+
 Name:       pandemic
-Version:    0.8.0
+Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
-License:    GPL or Artistic
+
+Summary:    Cooperative pandemic board game
+License:    GPL+ or Artistic
 Group:      Games/Strategy
-Summary:    Operations expert pandemic role
-Url:        http://search.cpan.org/dist/Games-Pandemic/
-Source:     http://www.cpan.org/modules/by-module/Games/Games-Pandemic-%{version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/Games/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Convert::Color)
 BuildRequires: perl(Devel::CheckOS)
 BuildRequires: perl(Encode)
@@ -44,8 +49,9 @@ BuildRequires: perl(Tk::ToolBar)
 BuildRequires: perl(UNIVERSAL::require)
 BuildRequires: perl(YAML::Tiny)
 BuildRequires: x11-server-xvfb
+
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Pandemic is a cooperative game where the players are united to beat the
@@ -58,7 +64,7 @@ friends, you'll have an exciting time - much more than with this poor
 electronic copy.
 
 %prep
-%setup -q -n Games-Pandemic-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -81,4 +87,3 @@ rm -rf %buildroot
 %{_bindir}/pandemic
 %{perl_vendorlib}/Games
 %{perl_vendorlib}/LocaleData
-
