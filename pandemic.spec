@@ -1,5 +1,5 @@
 %define upstream_name    Games-Pandemic
-%define upstream_version 1.000000
+%define upstream_version 1.092640
 
 Name:       pandemic
 Version:    %perl_convert_version %{upstream_version}
