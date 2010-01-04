@@ -3,7 +3,7 @@
 
 Name:       pandemic
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Cooperative pandemic board game
 License:    GPL+ or Artistic
@@ -52,6 +52,9 @@ BuildRequires: x11-server-xvfb
 
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+
+# bug #56809: prereq not automatically found
+Requires: perl(POE::Loop::Tk)
 
 %description
 Pandemic is a cooperative game where the players are united to beat the
