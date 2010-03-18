@@ -79,6 +79,17 @@ electronic copy.
 %install
 rm -rf %buildroot
 %makeinstall_std
+cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
+[Desktop Entry]
+Name=Pandemic
+Comment=Cooperative pandemic board game
+Exec=/usr/bin/pandemic
+Icon=%{perl_vendorlib}/Games/Pandemic/share/icon.png
+Terminal=false
+Type=Application
+Categories=Game;StrategyGame
+EOF
+
 
 %clean
 rm -rf %buildroot
@@ -90,3 +101,4 @@ rm -rf %buildroot
 %{_bindir}/pandemic
 %{perl_vendorlib}/Games
 %{perl_vendorlib}/LocaleData
+%{_datadir}/applications/mandriva-%{name}.desktop
