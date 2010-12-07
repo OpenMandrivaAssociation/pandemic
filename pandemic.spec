@@ -3,7 +3,7 @@
 
 Name:       pandemic
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 3
 
 Summary:    Cooperative pandemic board game
 License:    GPL+ or Artistic
