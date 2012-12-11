@@ -3,7 +3,7 @@
 
 Name:       pandemic
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    3
 
 Summary:    Cooperative pandemic board game
 License:    GPL+ or Artistic
@@ -49,9 +49,9 @@ BuildRequires: perl(Tk::ToolBar)
 BuildRequires: perl(UNIVERSAL::require)
 BuildRequires: perl(YAML::Tiny)
 BuildRequires: x11-server-xvfb
+BuildRequires: perl-devel
 
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 # bug #56809: prereq not automatically found
 Requires: perl(POE::Loop::Tk)
@@ -77,22 +77,7 @@ electronic copy.
 #xvfb-run make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
-cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
-[Desktop Entry]
-Name=Pandemic
-Comment=Cooperative pandemic board game
-Exec=/usr/bin/pandemic
-Icon=%{perl_vendorlib}/Games/Pandemic/share/icon.png
-Terminal=false
-Type=Application
-Categories=Game;StrategyGame
-EOF
-
-
-%clean
-rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
@@ -101,4 +86,38 @@ rm -rf %buildroot
 %{_bindir}/pandemic
 %{perl_vendorlib}/Games
 %{perl_vendorlib}/LocaleData
-%{_datadir}/applications/mandriva-%{name}.desktop
+
+
+%changelog
+* Mon Jan 04 2010 Jérôme Quelin <jquelin@mandriva.org> 1.92.660-2mdv2010.1
++ Revision: 486105
+- fix #56809: missing requires:
+
+* Thu Sep 24 2009 Jérôme Quelin <jquelin@mandriva.org> 1.92.660-1mdv2010.0
++ Revision: 448257
+- update to 1.092660
+
+* Wed Sep 23 2009 Jérôme Quelin <jquelin@mandriva.org> 1.92.640-1mdv2010.0
++ Revision: 447821
+- update to 1.092640
+
+* Thu Sep 10 2009 Jérôme Quelin <jquelin@mandriva.org> 1.0.0-1mdv2010.0
++ Revision: 437200
+- update to 1.000000
+
+  + Michael Scherer <misc@mandriva.org>
+    - fix Url tag, as found out by neoclust
+
+* Mon Aug 31 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.8.0-1mdv2010.0
++ Revision: 422838
+- new version
+- desactivate tests, xvfb segfaults
+
+* Sun Aug 23 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.7.0-1mdv2010.0
++ Revision: 420194
+- run tests through xvfb
+- import pandemic
+
+
+* Sun Aug 23 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.7.0-1mdv2010.0
+- initial mdv release
