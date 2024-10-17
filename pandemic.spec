@@ -8,7 +8,7 @@ Release:    4
 Summary:    Cooperative pandemic board game
 License:    GPL+ or Artistic
 Group:      Games/Strategy
-Url:        http://search.cpan.org/dist/%{upstream_name}/
+Url:        https://search.cpan.org/dist/%{upstream_name}/
 Source0:    http://www.cpan.org/modules/by-module/Games/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Convert::Color)
