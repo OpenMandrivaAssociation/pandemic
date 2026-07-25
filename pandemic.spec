@@ -1,15 +1,15 @@
 %define upstream_name    Games-Pandemic
-%define upstream_version 1.092660
+%define upstream_version 1.120510
 
 Name:       pandemic
-Version:    %perl_convert_version %{upstream_version}
-Release:    4
+Version:    %{upstream_version}
+Release:    1
 
 Summary:    Cooperative pandemic board game
 License:    GPL+ or Artistic
 Group:      Games/Strategy
-Url:        https://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://www.cpan.org/modules/by-module/Games/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        http://search.cpan.org/dist/Games-Pandemic
+Source0:    https://cpan.metacpan.org/authors/id/J/JQ/JQUELIN/Games-Pandemic-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Convert::Color)
