@@ -8,7 +8,7 @@ Release:    1
 Summary:    Cooperative pandemic board game
 License:    GPL+ or Artistic
 Group:      Games/Strategy
-Url:        http://search.cpan.org/dist/Games-Pandemic
+Url:        https://github.com/jquelin/games-pandemic
 Source0:    https://cpan.metacpan.org/authors/id/J/JQ/JQUELIN/Games-Pandemic-%{upstream_version}.tar.gz
 
 BuildRequires:	make
