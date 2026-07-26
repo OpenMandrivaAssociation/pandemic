@@ -1,15 +1,13 @@
 %define upstream_name    Games-Pandemic
-%define upstream_version 1.120510
-
 Name:       pandemic
-Version:    %{upstream_version}
-Release:    1
+Version:    1.120510
+Release:    2
 
 Summary:    Cooperative pandemic board game
 License:    GPL+ or Artistic
 Group:      Games/Strategy
 Url:        https://github.com/jquelin/games-pandemic
-Source0:    https://cpan.metacpan.org/authors/id/J/JQ/JQUELIN/Games-Pandemic-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/J/JQ/JQUELIN/Games-Pandemic-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Convert::Color)
@@ -68,7 +66,7 @@ friends, you'll have an exciting time - much more than with this poor
 electronic copy.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%setup -q -n %{upstream_name}-%{version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
